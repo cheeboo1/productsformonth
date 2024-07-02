@@ -1,0 +1,27 @@
+# List of products and their daily consumption (in grams)
+products = {
+    "apples": 200,
+    "bananas": 150,
+    "milk": 500,
+    "bread": 100,
+    "chicken": 200,
+    "rice": 100
+}
+
+# Number of days in a month
+days_in_month = 30
+
+# Function to calculate monthly consumption
+def calculate_monthly_consumption(products, days):
+    monthly_consumption = {}
+    for product, daily_amount in products.items():
+        monthly_consumption[product] = daily_amount * days
+    return monthly_consumption
+
+# Calculate monthly consumption
+monthly_consumption = calculate_monthly_consumption(products, days_in_month)
+
+# Print results
+print("Monthly consumption of products:")
+for product, amount in monthly_consumption.items():
+    print(f"{product}: {amount} grams")
